@@ -1,0 +1,25 @@
+.remove-gallery{
+    background-color: #df7366;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 24px;
+    width: 30px;
+    position: absolute;
+    margin-left: 305px;
+    margin-top: -15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    z-index: 999;
+}
+.placehold{
+    display: none;
+}
+.add-new-gallery i{
+    font-size: 240px;
+    color:#aaa;
+}
+
+.remove-gallery:hover{
+
+    background-color: #df4d4b;
+}

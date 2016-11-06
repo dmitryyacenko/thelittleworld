@@ -1,0 +1,40 @@
+<template name="ufgallery">
+    <div class="ufgallery-wrapper">
+        <div class="fullscreen-gallery">
+            <div class="row">
+                <div class="current-image-wrapper col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                    <img class="current-image" data-currentid="0" src="{{getFirstImageAddress}}">
+                    <!-- <div class="current-image-div" data-currentid="0" style="background-image: url('{{getFirstImageAddress}}')"></div> -->
+                </div>
+                <div class="description-wrapper col-lg-4 col-sm-4 xol-xs-4 col-md-4">
+                    {{#if currentUser}}
+                        <h3 class="title" contenteditable="true">{{title}}</h3>
+                        <h5 class="description" contenteditable="true">{{description}}</h5>
+                    {{else}}
+                        <h3>{{title}}</h3>
+                        <h5>{{description}}</h5>
+                    {{/if}}
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <div class="row thumbnail-rows">
+                {{#each images}}
+                    <div class="img-thumbnail-wrapper">
+                        {{#if currentUser}}
+                            <div class="remove-image" data-galleryid="{{_id}}"><i class="fa fa-remove"></i> </div>
+                        {{/if}}
+                        <img class="img-thumbnail" data-imageid="{{@index}}" src="{{address}}">
+                    </div>
+                {{/each}}
+                {{#if currentUser}}
+
+                    <div class="add-image-zone img-thumbnail-wrapper add-picture">
+                        <div class=" add-image" data-galleryid="{{_id}}"><i class="greenfield fa fa-plus"></i> </div>
+                        <i class="fa fa-picture-o"></i>
+                    </div>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</template>

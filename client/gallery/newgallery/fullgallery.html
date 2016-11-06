@@ -1,0 +1,26 @@
+<template name="newgallery">
+    <div class="ufgallery-wrapper newgallery">
+        <div class="fullscreen-gallery">
+            <div class="row">
+                <div class="current-image-wrapper">
+                    <i class="fa fa-picture-o bigpicture"></i>
+                </div>
+                <div class="description-wrapper">
+                    <h3 class="title" contenteditable="true">Название галереи</h3>
+                    <br>
+                    <h5 class="description" contenteditable="true">Полное описание (без переносов, пожалуйста)</h5>
+                    <br>
+                    <button class="btn btn-success save-gallery-btn">Сохранить</button>
+                    <br>
+                </div>
+            </div>
+            <div class="row thumbnail-rows">
+
+                <div class="add-image-zone img-thumbnail-wrapper add-picture">
+                    <div class=" add-image" data-galleryid="{{_id}}"><i class="greenfield fa fa-plus"></i> </div>
+                    <i class="fa fa-picture-o"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

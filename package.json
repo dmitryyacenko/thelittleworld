@@ -1,0 +1,20 @@
+{
+  "name": "TheLittleWorld",
+  "version":"0.9.0",
+  "description":"Single-page site that combine usuall and admin parts in one page",
+  "keywords":["SPA", "Meteor", "The Little World"],
+  "license":"Apache-2.0",
+  "url":"http://thelittleworld.tk",
+  "private": true,
+  "author":{
+  	"name":"Dmitry Yacenko",
+  	"email":"dmitryyacenko@gmail.com"
+  	},
+  "scripts": {
+  	"preinstall":"curl https://install.meteor.com/ | sh",
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "meteor-node-stubs": "~0.2.0"
+  }
+}

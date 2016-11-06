@@ -1,0 +1,3 @@
+Template.indextmpl.rendered=function () {
+
+}

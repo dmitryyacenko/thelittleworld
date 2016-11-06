@@ -1,0 +1,58 @@
+<template name="carousel">
+    <section class="carousel">
+        <div class="reel">
+            <article class="add-new-gallery">
+                <a href="#" class="image featured">
+                    <div class="img-holder"><i class="fa fa-plus-circle"></i> </div>
+                </a>
+                <header>
+                    <h3><a href="#" >Добавить</a></h3>
+                </header>
+                <p>Новая миниатюра</p>
+            </article>
+            {{#each carouselItem}}
+                <article class="true-gallery" data-galleryid="{{_id}}">
+                    {{#if currentUser}}
+                    <div class="remove-gallery" data-galleryid="{{_id}}"><i class="fa fa-remove"></i> </div>
+                    {{/if}}
+                    <a href="#" data-galleryid="{{_id}}" class="true-gallery-click-area image featured">
+                        <div class="img-holder" style="background-image: url('{{headerImageAddress}}')" alt=""></div>
+                    </a>
+                    <header data-galleryid="{{_id}}" class="true-gallery-click-area">
+                        <h3><a href="#">{{title}}</a></h3>
+                    </header>
+                    <p>{{description}}</p>
+                </article>
+            {{/each}}
+        </div>
+    </section>
+    <div class="modal add-{{collectionName}} fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Новая галерея</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="photo-urls-wrapper">
+                        <h4>Название</h4>
+                        <input type="text" class="form-control title-input">
+                        <br>
+                        <h4>
+                            Описание
+                        </h4>
+                        <input type="text" class="form-control desc-input">
+                        <br>
+                        <h4>Ссылки на изображения</h4>
+                        <input class="form-control picture-url-input"><br>
+                    </div>
+                    <button class="btn btn-info btn-add-url">Добавить</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-primary save-gallery">Сохранить</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+</template>
